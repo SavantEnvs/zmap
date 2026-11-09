@@ -1,0 +1,8 @@
+project: savantenvs/zmap
+target: fuzz_icmp_echo_time_response
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_icmp_echo_time_response/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_icmp_echo_time_response
+    libfuzzer: true

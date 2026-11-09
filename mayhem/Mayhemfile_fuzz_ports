@@ -1,0 +1,8 @@
+project: savantenvs/zmap
+target: fuzz_ports
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_ports/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_ports
+    libfuzzer: true

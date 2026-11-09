@@ -1,0 +1,8 @@
+project: savantenvs/zmap
+target: fuzz_udp_response
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_udp_response/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_udp_response
+    libfuzzer: true
